@@ -55,7 +55,9 @@ REST_FRAMEWORK = {
 
 # Static files
 STATIC_URL = '/assets/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'dist', 'assets')]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'dist', 'assets'),
+] if os.path.exists(os.path.join(BASE_DIR, 'dist', 'assets')) else []
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # NO WHITENOISE_ROOT — admin would be intercepted by it
 
