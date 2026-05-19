@@ -7,8 +7,6 @@ db.sqlite3
 staticfiles/
 media/
 
-# Frontend build
-dist/
 
 # Environment
 .env
